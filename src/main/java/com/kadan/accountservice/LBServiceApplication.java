@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 public class LBServiceApplication {
 
 	public static void main(String[] args) {
-		System.setProperty("Log4jContextSelector", "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
+		//System.setProperty("Log4jContextSelector", "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
 		SpringApplication.run(LBServiceApplication.class, args);
 	}
 
