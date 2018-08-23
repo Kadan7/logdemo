@@ -2,8 +2,8 @@ package com.kadan.accountservice.web;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/demo")
 public class UserController {
 
-    protected final Logger logger = LogManager.getLogger(this.getClass());
+    private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
 
     @RequestMapping(value = "/log", method = RequestMethod.GET)
