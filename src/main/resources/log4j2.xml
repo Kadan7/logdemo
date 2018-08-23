@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <configuration status="on">
   <appenders>  
-    <Console name="Console" target="SYSTEM_OUT">  
-      <!--<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] [%l] %-5level %logger{36} - %msg%n"/>-->
-      <JsonLayout/>
+    <Console name="Console" target="SYSTEM_OUT">
+      <JsonLayout complete="true"/>
+      <!--<JsonLayout><KeyValuePair key="timeMillis" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}"/></JsonLayout>-->
     </Console>  
   </appenders>  
   <loggers>
-    <AsyncLogger name="AsyncLogger" level="trace" includeLocation="true">
+    <AsyncLogger name="com.kadan" level="trace" includeLocation="true">
       <appender-ref ref="Console" />
-      <appender-ref ref="debugLog" />
-      <appender-ref ref="errorLog" />
+      <!--<appender-ref ref="debugLog" />-->
+      <!--<appender-ref ref="errorLog" />-->
     </AsyncLogger>
 
     <asyncRoot level="trace" includeLocation="true">
