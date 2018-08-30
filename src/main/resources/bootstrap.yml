@@ -2,17 +2,17 @@
 spring:
   application:
     name: lb-service
-#  cloud:
-#    config:
-#      discovery:
-#        enabled: false
-#        service-id: lb-service
+  cloud:
+    config:
+      discovery:
+        enabled: false
+        service-id: lb-service
 #      label: master
 #      profile: uat
 #      uri: http://kadan1:8080/
-##      label: ${config_label}
-##      profile: ${config_profile}
-##      uri: http://${config_host}:${config_port}/
+      label: ${config_label}
+      profile: ${config_profile}
+      uri: http://${config_host}:${config_port}/
 #      username: adminTest
 #      password: admin
 #server:
