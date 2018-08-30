@@ -1,4 +1,4 @@
-package com.bamboonetworks.modules.utils;
+package com.kadan.accountservice.web;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,11 +8,10 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
-import java.security.MessageDigest;
 import java.security.Security;
 
 /**
- * @author tomy.tang
+ * @author kadan.li
  */
 public class PasswordHandler {
 
@@ -20,7 +19,7 @@ public class PasswordHandler {
 	private String key;
 
 	//向量参数
-	private static final String iv   = "bambootechnology";
+	private static final String iv   = "kadanstudio";
 
 	private static final IvParameterSpec ivSpec = new IvParameterSpec(iv.getBytes());
 

@@ -22,7 +22,7 @@
     </AsyncLogger>
 
     <asyncRoot level="info" includeLocation="true">
-      <!--<appender-ref ref="Console" />-->
+      <appender-ref ref="Console" />
     </asyncRoot>
   </loggers>
 </configuration>
