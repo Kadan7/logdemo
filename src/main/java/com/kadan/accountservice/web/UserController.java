@@ -75,7 +75,10 @@ public class UserController {
 //    public String testRibbonFailure(){
 //        return "bookmark service's down. ";
 //    }
-
+    @Scheduled(cron = "*/5 * * * * ?")
+    public void sche(){
+        logger.info("schedule job .... ");
+    }
 
 
 
